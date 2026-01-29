@@ -1,0 +1,15 @@
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\bin\Debug\net8.0\AdventureWorksAPI.Infrastructure.deps.json
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\bin\Debug\net8.0\AdventureWorksAPI.Infrastructure.dll
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\bin\Debug\net8.0\AdventureWorksAPI.Infrastructure.pdb
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\bin\Debug\net8.0\AdventureWorksAPI.Domain.dll
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\bin\Debug\net8.0\AdventureWorksAPI.Domain.pdb
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\AdventureWorksAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\AdventureWorksAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\AdventureWorksAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\AdventureWorksAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\AdventureWorksAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\Adventur.538B52C1.Up2Date
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\AdventureWorksAPI.Infrastructure.dll
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\refint\AdventureWorksAPI.Infrastructure.dll
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\AdventureWorksAPI.Infrastructure.pdb
+C:\Users\thisi\source\repos\AdventureWorksAPI\AdventureWorksAPI.Infrastructure\obj\Debug\net8.0\ref\AdventureWorksAPI.Infrastructure.dll

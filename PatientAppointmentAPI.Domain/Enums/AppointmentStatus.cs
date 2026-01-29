@@ -1,0 +1,10 @@
+﻿namespace PatientAppointmentAPI.Domain.Enums
+{
+    public enum AppointmentStatus
+    {
+        Scheduled = 0,
+        Attended = 1,
+        Cancelled = 2,
+        Missed = 3
+    }
+}
