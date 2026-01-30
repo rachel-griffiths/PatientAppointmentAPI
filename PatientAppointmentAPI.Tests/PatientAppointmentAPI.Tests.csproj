@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="AppointmentRequests.cs" />
+    <None Include="Appointments\AppointmentRequests.cs" />
   </ItemGroup>
 
   <ItemGroup>

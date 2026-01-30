@@ -1,7 +1,7 @@
 ﻿using FluentValidation.TestHelper;
 using PatientAppointmentAPI.Core.Validators.Patient;
 
-namespace PatientAppointmentAPI.Tests
+namespace PatientAppointmentAPI.Tests.Patients
 {
     public class UpdatePatientRequestValidatorTests
     {

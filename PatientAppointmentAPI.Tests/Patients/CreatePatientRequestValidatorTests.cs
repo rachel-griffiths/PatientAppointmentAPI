@@ -1,9 +1,9 @@
 ﻿using FluentValidation.TestHelper;
 using PatientAppointmentAPI.Core.Validators.Patient;
 
-namespace PatientAppointmentAPI.Tests
+namespace PatientAppointmentAPI.Tests.Patients
 {
-    public class CreatePatientRequestValidatorTests
+    public class CreateAppointmentRequestValidatorTests
     {
         private readonly CreatePatientRequestValidator _validator = new();
 

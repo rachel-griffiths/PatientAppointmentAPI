@@ -1,7 +1,7 @@
 ﻿using PatientAppointmentAPI.Core.DTOs.Patients;
 using PatientAppointmentAPI.Domain.Enums;
 
-namespace PatientAppointmentAPI.Tests
+namespace PatientAppointmentAPI.Tests.Patients
 {
     public static class PatientRequests
     {

@@ -88,6 +88,7 @@ To meet the MVP scope and timebox, the following were intentionally deferred:
 - Full localisation implementation
 - Authentication and role-based access control
 - Demographic patient data
+- linting file to enforce set standards.
 
 Each can be added later without architectural changes.
 
