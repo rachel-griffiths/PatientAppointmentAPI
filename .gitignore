@@ -426,3 +426,5 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+.vs/PatientAppointmentAPI/v17/.suo
+/.vs
