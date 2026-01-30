@@ -15,7 +15,7 @@ namespace PatientAppointmentAPI.Core.DTOs.Appointments
             DurationMinutes = appointment.DurationMinutes;
             Status = appointment.Status;
             ClinicianId = appointment.ClinicianId;
-            DurationMinutes = appointment.DurationMinutes;
+            Department = appointment.Department;
         }
 
         public Guid Id { get; private set; }
