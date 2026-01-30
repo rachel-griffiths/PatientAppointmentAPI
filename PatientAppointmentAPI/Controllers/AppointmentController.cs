@@ -32,10 +32,12 @@ namespace PatientAppointmentAPI.Controllers
             return Ok(dtos);
         }
 
-        // GET api/appointments?patientId=...&clinicianId=...&fromDate=...&toDate=...&status=...
-        [HttpGet]
+        // GET api/appointments/search
+        [HttpGet("search")]
         [ProducesResponseType(typeof(List<AppointmentDto>), StatusCodes.Status200OK)]
-        public async Task<ActionResult<List<AppointmentDto>>> Search([FromQuery] GetAppointmentsRequest query, CancellationToken ct)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<List<AppointmentDto>>> Search([FromBody] GetAppointmentsRequest query, CancellationToken ct)
         {
             var dtos = await _service.SearchAsync(query, ct);
             return Ok(dtos);
@@ -45,6 +47,7 @@ namespace PatientAppointmentAPI.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(AppointmentDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<AppointmentDto>> Create([FromBody] CreateAppointmentRequest request, CancellationToken ct)
         {
             var created = await _service.CreateAsync(request, ct);
@@ -56,7 +59,7 @@ namespace PatientAppointmentAPI.Controllers
         [ProducesResponseType(typeof(AppointmentDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<AppointmentDto>> Update(Guid id, [FromBody] UpdateAppointmentRequest request, CancellationToken ct)
         {
             // Prefer route id as source of truth
@@ -70,10 +73,32 @@ namespace PatientAppointmentAPI.Controllers
         [HttpPost("{id:guid}/cancel")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Cancel(Guid id, CancellationToken ct)
         {
             await _service.CancelAsync(id, ct);
+            return NoContent();
+        }
+
+        // POST api/appointments/{id}/markattended
+        [HttpPost("{id:guid}/markattended")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> MarkAttended(Guid id, CancellationToken ct)
+        {
+            await _service.MarkAsAttended(id, ct);
+            return NoContent();
+        }
+
+        // POST api/appointments/{id}/markmissed
+        [HttpPost("{id:guid}/markmissed")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> MarkMissedIfOverdue(Guid id, CancellationToken ct)
+        {
+            await _service.MarkMissedIfOverdue(id, ct);
             return NoContent();
         }
     }

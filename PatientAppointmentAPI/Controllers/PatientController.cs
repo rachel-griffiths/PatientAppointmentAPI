@@ -38,6 +38,7 @@ namespace PatientAppointmentAPI.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(PatientDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<PatientDto>> Create(
             [FromBody] CreatePatientRequest request,
             CancellationToken ct)
@@ -55,7 +56,7 @@ namespace PatientAppointmentAPI.Controllers
         [ProducesResponseType(typeof(PatientDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<PatientDto>> Update(
             Guid id,
             [FromBody] UpdatePatientRequest request,
@@ -72,7 +73,7 @@ namespace PatientAppointmentAPI.Controllers
         [HttpDelete("{id:guid}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(Guid id, CancellationToken ct)
         {
             await _service.DeletePatientAsync(id, ct);
